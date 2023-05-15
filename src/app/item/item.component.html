@@ -1,0 +1,16 @@
+<div class="row">
+    <div *ngFor="let item of items(); let i = index" class="card col-4 mx-auto" style="width: 18rem;">
+      <div class="card-body">
+        <h5 class="card-title">{{item.name}}</h5>
+        <h6 class="card-subtitle mb-2 text-body-secondary">{{item.description}}</h6>
+        <p class="card-text">{{item.description}}</p>
+        <p>{{item.price | currency:'KSH'}}</p>
+        <p>
+          QTY
+          <input type="number" min="1"/>
+        </p>
+        <button class="btn btn-sm" (click)="deleteItem(item.name)">Delete</button>
+        <button  class="btn btn-sm">Add to cart</button>
+      </div>
+    </div>
+  </div>
